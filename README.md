@@ -16,7 +16,6 @@
 ◽Define your hosts ❗ (its need for the configuration)
 
 ```
-code block
 nano /etc/hosts -> important step if you dont put your hostname with you server ip, its not going to work
 add -> ipserver hostname@domain hostname domain (ex: 1.1.1.1 nis.server.pt nis server.pt)
 
@@ -26,7 +25,6 @@ add -> ipserver hostname@domain hostname domain (ex: 1.1.1.1 nis.server.pt nis s
 ◽Define if the Instance is the master nis server or not
 
 ```
-code block
 nano /etc/default/nis
 NISSERVER=false ->change to NISSERVER=master ->this change is done so the machine knows that he is the NIS server
 
@@ -34,7 +32,6 @@ NISSERVER=false ->change to NISSERVER=master ->this change is done so the machin
 ◽Define which are the Subnets allowed in the NIS server
 
 ```
-code block
 # in the end add mask and network
 ex: 255.255.255.0		10.0.0.0
 
@@ -42,7 +39,6 @@ ex: 255.255.255.0		10.0.0.0
 ➡️dont comment 0.0.0.0 0.0.0.0 until you have all nis configuration working when ou have all configs done ❗
 
 ```
-code block
 nano /etc/var/Makefile
 line 52 change false ->true
 line 56 change false ->true
@@ -58,7 +54,6 @@ line 56 change false ->true
 ◽Define your hosts ❗ (its need for the configuration) ➡️ the same as the server ❗
 
 ```
-code block
 nano /etc/hosts -> important step if you dont put your hostname with you server ip, its not going to work
 add -> ipserver hostname@domain hostname domain (ex: 1.1.1.1 nis.server.pt nis server.pt)
 
@@ -68,7 +63,6 @@ add -> ipserver hostname@domain hostname domain (ex: 1.1.1.1 nis.server.pt nis s
 ◽Define which is the server ➡️ nano /etc/yp.conf ➡️ add in the end -> domain ______ server hostname.domain (ex domain server.pt server nis.server.pt)
 
 ```
-code block
 nano /etc/nsswitch.conf
 passwd:         files systemd nis -> add nis
 group:          files systemd nis -> add nis
@@ -80,7 +74,6 @@ hosts:          files dns nis -> add nis
 ```
 
 ```
-code block
 nano /etc/pam.d/common-session
 add in the end -> session optional        pam_mkhomedir.so skel=/etc/skel umask=077
 
@@ -94,7 +87,6 @@ add in the end -> session optional        pam_mkhomedir.so skel=/etc/skel umask=
 ◽to add the new users to the configuration
 
 ```
-code block
 cd /var/yp
 make
 
