@@ -92,4 +92,4 @@ make
 
 ```
 
-✔️to check if the configuration is working login in both (server and cliente) 
+✔️to check if the configuration is working login in both (server and client) 
