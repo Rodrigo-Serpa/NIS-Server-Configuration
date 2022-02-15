@@ -29,7 +29,7 @@ nano /etc/default/nis
 NISSERVER=false ->change to NISSERVER=master ->this change is done so the machine knows that he is the NIS server
 
 ```
-◽Define which are the Subnets allowed in the NIS server
+◽Define which are the Subnets allowed in the NIS server ➡️ ` nano /etc/ypserv.securenets `
 
 ```
 # in the end add mask and network
