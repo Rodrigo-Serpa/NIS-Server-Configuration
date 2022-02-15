@@ -39,7 +39,7 @@ ex: 255.255.255.0		10.0.0.0
 ➡️dont comment 0.0.0.0 0.0.0.0 until you have all nis configuration working when ou have all configs done ❗
 
 ```
-nano /etc/var/Makefile
+nano /var/yp/Makefile
 line 52 change false ->true
 line 56 change false ->true
 
